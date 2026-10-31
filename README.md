@@ -60,7 +60,7 @@ To preserve silicon area and power efficiency, the Arithmetic Logic Unit remains
 ## Phase 4: Instruction Decoding
 The Instruction Decoder serves as the hardware translator, mapping raw 32-bit compiled firmware into physical control lines (`alu_ctrl`, `reg_we`, `rs1_addr`, etc.) to orchestrate the datapath.
 
-![Decoder Instruction Parsing](docs/decoder_instruction_parsing.png.png)
+![Decoder Instruction Parsing](docs/decoder_instruction_parsing.png)
 
 **Verification:** The module receives the RV32I machine code `0x002082B3` (ADD `x5, x1, x2`) and instantly routes the correct source registers (`1`, `2`) and operation code (`0`). At 10ns, it successfully transitions to `0x40418333` (SUB `x6, x3, x4`).
 
