@@ -1,0 +1,69 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x574086e6d490 .scope module, "tb_tmr_voter" "tb_tmr_voter" 2 3;
+ .timescale -9 -12;
+P_0x574086e6d620 .param/l "WIDTH" 0 2 6, +C4<00000000000000000000000000100000>;
+v0x574086ebdf30_0 .var "a", 31 0;
+v0x574086ebe010_0 .var "b", 31 0;
+v0x574086ebe0e0_0 .var "c", 31 0;
+v0x574086ebe1e0_0 .net "out", 31 0, L_0x574086ebe660;  1 drivers
+S_0x574086e6d6c0 .scope module, "uut" "tmr_voter" 2 11, 3 3 0, S_0x574086e6d490;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 32 "reg_a";
+    .port_info 1 /INPUT 32 "reg_b";
+    .port_info 2 /INPUT 32 "reg_c";
+    .port_info 3 /OUTPUT 32 "reg_out";
+P_0x574086e6d8a0 .param/l "WIDTH" 0 3 4, +C4<00000000000000000000000000100000>;
+L_0x574086ebe2b0 .functor AND 32, v0x574086ebdf30_0, v0x574086ebe010_0, C4<11111111111111111111111111111111>, C4<11111111111111111111111111111111>;
+L_0x574086ebe3f0 .functor AND 32, v0x574086ebe010_0, v0x574086ebe0e0_0, C4<11111111111111111111111111111111>, C4<11111111111111111111111111111111>;
+L_0x574086ebe4b0 .functor OR 32, L_0x574086ebe2b0, L_0x574086ebe3f0, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+L_0x574086ebe5c0 .functor AND 32, v0x574086ebdf30_0, v0x574086ebe0e0_0, C4<11111111111111111111111111111111>, C4<11111111111111111111111111111111>;
+L_0x574086ebe660 .functor OR 32, L_0x574086ebe4b0, L_0x574086ebe5c0, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+v0x574086ea75a0_0 .net *"_ivl_0", 31 0, L_0x574086ebe2b0;  1 drivers
+v0x574086ebd830_0 .net *"_ivl_2", 31 0, L_0x574086ebe3f0;  1 drivers
+v0x574086ebd910_0 .net *"_ivl_4", 31 0, L_0x574086ebe4b0;  1 drivers
+v0x574086ebda00_0 .net *"_ivl_6", 31 0, L_0x574086ebe5c0;  1 drivers
+v0x574086ebdae0_0 .net "reg_a", 31 0, v0x574086ebdf30_0;  1 drivers
+v0x574086ebdc10_0 .net "reg_b", 31 0, v0x574086ebe010_0;  1 drivers
+v0x574086ebdcf0_0 .net "reg_c", 31 0, v0x574086ebe0e0_0;  1 drivers
+v0x574086ebddd0_0 .net "reg_out", 31 0, L_0x574086ebe660;  alias, 1 drivers
+    .scope S_0x574086e6d490;
+T_0 ;
+    %vpi_call 2 20 "$dumpfile", "waves/tmr_voter.vcd" {0 0 0};
+    %vpi_call 2 21 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x574086e6d490 {0 0 0};
+    %vpi_call 2 24 "$display", "Time: %0t | System Normal", $time {0 0 0};
+    %pushi/vec4 2863311530, 0, 32;
+    %store/vec4 v0x574086ebdf30_0, 0, 32;
+    %pushi/vec4 2863311530, 0, 32;
+    %store/vec4 v0x574086ebe010_0, 0, 32;
+    %pushi/vec4 2863311530, 0, 32;
+    %store/vec4 v0x574086ebe0e0_0, 0, 32;
+    %delay 10000, 0;
+    %vpi_call 2 29 "$display", "Time: %0t | Injecting SEU into Register A", $time {0 0 0};
+    %pushi/vec4 3735928559, 0, 32;
+    %store/vec4 v0x574086ebdf30_0, 0, 32;
+    %delay 10000, 0;
+    %pushi/vec4 2863311530, 0, 32;
+    %store/vec4 v0x574086ebdf30_0, 0, 32;
+    %delay 10000, 0;
+    %vpi_call 2 38 "$display", "Time: %0t | Injecting SEU into Register C", $time {0 0 0};
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v0x574086ebe0e0_0, 0, 32;
+    %delay 10000, 0;
+    %vpi_call 2 42 "$display", "Simulation Complete." {0 0 0};
+    %vpi_call 2 43 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "tb/tb_tmr_voter.v";
+    "src/tmr/tmr_voter.v";

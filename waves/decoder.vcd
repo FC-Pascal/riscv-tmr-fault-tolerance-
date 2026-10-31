@@ -1,0 +1,71 @@
+$date
+	Sat Oct 31 00:41:12 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_decoder $end
+$var wire 5 ! rs2_addr [4:0] $end
+$var wire 5 " rs1_addr [4:0] $end
+$var wire 1 # reg_we $end
+$var wire 5 $ rd_addr [4:0] $end
+$var wire 4 % alu_ctrl [3:0] $end
+$var reg 32 & instr [31:0] $end
+$scope module uut $end
+$var wire 32 ' instr [31:0] $end
+$var wire 5 ( rs2_addr [4:0] $end
+$var wire 5 ) rs1_addr [4:0] $end
+$var wire 5 * rd_addr [4:0] $end
+$var wire 7 + opcode [6:0] $end
+$var wire 7 , funct7 [6:0] $end
+$var wire 3 - funct3 [2:0] $end
+$var parameter 4 . ALU_ADD $end
+$var parameter 4 / ALU_AND $end
+$var parameter 4 0 ALU_SUB $end
+$var parameter 7 1 OP_R_TYPE $end
+$var reg 4 2 alu_ctrl [3:0] $end
+$var reg 1 # reg_we $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b110011 1
+b1000 0
+b111 /
+b0 .
+$end
+#0
+$dumpvars
+b0 2
+b0 -
+b0 ,
+b110011 +
+b101 *
+b1 )
+b10 (
+b1000001000001010110011 '
+b1000001000001010110011 &
+b0 %
+b101 $
+1#
+b1 "
+b10 !
+$end
+#10000
+b1000 %
+b1000 2
+1#
+b100000 ,
+b110 $
+b110 *
+b11 "
+b11 )
+b100 !
+b100 (
+b1000000010000011000001100110011 &
+b1000000010000011000001100110011 '
+#20000

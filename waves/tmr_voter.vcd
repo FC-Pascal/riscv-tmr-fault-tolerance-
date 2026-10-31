@@ -1,0 +1,50 @@
+$date
+	Fri Oct 30 03:17:46 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_tmr_voter $end
+$var wire 32 ! out [31:0] $end
+$var parameter 32 " WIDTH $end
+$var reg 32 # a [31:0] $end
+$var reg 32 $ b [31:0] $end
+$var reg 32 % c [31:0] $end
+$scope module uut $end
+$var wire 32 & reg_a [31:0] $end
+$var wire 32 ' reg_b [31:0] $end
+$var wire 32 ( reg_c [31:0] $end
+$var wire 32 ) reg_out [31:0] $end
+$var parameter 32 * WIDTH $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b100000 *
+b100000 "
+$end
+#0
+$dumpvars
+b10101010101010101010101010101010 )
+b10101010101010101010101010101010 (
+b10101010101010101010101010101010 '
+b10101010101010101010101010101010 &
+b10101010101010101010101010101010 %
+b10101010101010101010101010101010 $
+b10101010101010101010101010101010 #
+b10101010101010101010101010101010 !
+$end
+#10000
+b11011110101011011011111011101111 #
+b11011110101011011011111011101111 &
+#20000
+b10101010101010101010101010101010 #
+b10101010101010101010101010101010 &
+#30000
+b0 %
+b0 (
+#40000

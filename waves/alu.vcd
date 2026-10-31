@@ -1,0 +1,81 @@
+$date
+	Fri Oct 30 04:30:33 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_alu $end
+$var wire 1 ! zero $end
+$var wire 32 " result [31:0] $end
+$var reg 4 # alu_ctrl [3:0] $end
+$var reg 32 $ op1 [31:0] $end
+$var reg 32 % op2 [31:0] $end
+$scope module uut $end
+$var wire 4 & alu_ctrl [3:0] $end
+$var wire 32 ' op1 [31:0] $end
+$var wire 32 ( op2 [31:0] $end
+$var wire 1 ! zero $end
+$var parameter 4 ) ADD $end
+$var parameter 4 * AND $end
+$var parameter 4 + OR $end
+$var parameter 4 , SLL $end
+$var parameter 4 - SRL $end
+$var parameter 4 . SUB $end
+$var parameter 4 / XOR $end
+$var reg 32 0 result [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b100 /
+b1000 .
+b101 -
+b1 ,
+b110 +
+b111 *
+b0 )
+$end
+#0
+$dumpvars
+b11001 0
+b1010 (
+b1111 '
+b0 &
+b1010 %
+b1111 $
+b0 #
+b11001 "
+0!
+$end
+#10000
+1!
+b0 "
+b0 0
+b1000 #
+b1000 &
+b1111 %
+b1111 (
+#20000
+0!
+b1111 "
+b1111 0
+b111 #
+b111 &
+b111100001111 %
+b111100001111 (
+b11111111 $
+b11111111 '
+#30000
+b10000 "
+b10000 0
+b1 #
+b1 &
+b100 %
+b100 (
+b1 $
+b1 '
+#40000

@@ -1,0 +1,176 @@
+$date
+	Fri Oct 30 04:12:31 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_tmr_register_file $end
+$var wire 32 ! rs2_data [31:0] $end
+$var wire 32 " rs1_data [31:0] $end
+$var reg 1 # clk $end
+$var reg 5 $ rd_addr [4:0] $end
+$var reg 32 % rd_data [31:0] $end
+$var reg 5 & rs1_addr [4:0] $end
+$var reg 5 ' rs2_addr [4:0] $end
+$var reg 1 ( rst_n $end
+$var reg 1 ) we $end
+$scope module uut $end
+$var wire 1 # clk $end
+$var wire 32 * raw_rs1_a [31:0] $end
+$var wire 32 + raw_rs1_b [31:0] $end
+$var wire 32 , raw_rs1_c [31:0] $end
+$var wire 32 - raw_rs2_a [31:0] $end
+$var wire 32 . raw_rs2_b [31:0] $end
+$var wire 32 / raw_rs2_c [31:0] $end
+$var wire 5 0 rd_addr [4:0] $end
+$var wire 32 1 rd_data [31:0] $end
+$var wire 5 2 rs1_addr [4:0] $end
+$var wire 5 3 rs2_addr [4:0] $end
+$var wire 1 ( rst_n $end
+$var wire 1 ) we $end
+$var wire 32 4 rs2_data [31:0] $end
+$var wire 32 5 rs1_data [31:0] $end
+$var integer 32 6 i [31:0] $end
+$scope module voter_rs1 $end
+$var wire 32 7 reg_a [31:0] $end
+$var wire 32 8 reg_b [31:0] $end
+$var wire 32 9 reg_c [31:0] $end
+$var wire 32 : reg_out [31:0] $end
+$var parameter 32 ; WIDTH $end
+$upscope $end
+$scope module voter_rs2 $end
+$var wire 32 < reg_a [31:0] $end
+$var wire 32 = reg_b [31:0] $end
+$var wire 32 > reg_c [31:0] $end
+$var wire 32 ? reg_out [31:0] $end
+$var parameter 32 @ WIDTH $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_tmr_register_file $end
+$scope module uut $end
+$var reg 32 A \bank_a[5] [31:0] $end
+$upscope $end
+$upscope $end
+$scope module tb_tmr_register_file $end
+$scope module uut $end
+$var reg 32 B \bank_b[5] [31:0] $end
+$upscope $end
+$upscope $end
+$scope module tb_tmr_register_file $end
+$scope module uut $end
+$var reg 32 C \bank_c[5] [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b100000 @
+b100000 ;
+$end
+#0
+$dumpvars
+b0 C
+b0 B
+b0 A
+b0 ?
+b0 >
+b0 =
+b0 <
+b0 :
+b0 9
+b0 8
+b0 7
+b100000 6
+b0 5
+b0 4
+b0 3
+b0 2
+b0 1
+b0 0
+b0 /
+b0 .
+b0 -
+b0 ,
+b0 +
+b0 *
+0)
+0(
+b0 '
+b0 &
+b0 %
+b0 $
+0#
+b0 "
+b0 !
+$end
+#5000
+b0 C
+b0 B
+b0 A
+b100000 6
+1#
+#10000
+0#
+#15000
+b1011111011101111 C
+b1011111011101111 B
+b1011111011101111 A
+b1011111011101111 %
+b1011111011101111 1
+b101 $
+b101 0
+1)
+1#
+1(
+#20000
+0#
+#25000
+b1011111011101111 !
+b1011111011101111 4
+b1011111011101111 ?
+b1011111011101111 "
+b1011111011101111 5
+b1011111011101111 :
+b1011111011101111 -
+b1011111011101111 <
+b1011111011101111 .
+b1011111011101111 =
+b1011111011101111 /
+b1011111011101111 >
+b101 '
+b101 3
+b1011111011101111 *
+b1011111011101111 7
+b1011111011101111 +
+b1011111011101111 8
+b1011111011101111 ,
+b1011111011101111 9
+b101 &
+b101 2
+0)
+1#
+#30000
+0#
+#35000
+1#
+b11111111111111111111111111111111 B
+b11111111111111111111111111111111 +
+b11111111111111111111111111111111 8
+b11111111111111111111111111111111 .
+b11111111111111111111111111111111 =
+#40000
+0#
+#45000
+1#
+#50000
+0#
+#55000
+1#
+#60000
+0#
+#65000
+1#
