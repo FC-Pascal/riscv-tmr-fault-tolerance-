@@ -1,3 +1,8 @@
+### 📄 [**Read the full technical report here**](https://fc-pascal.github.io/riscv-tmr-fault-tolerance-/Oloore_Issa_Abayomi_Fault_Tolerant_RISCV_Report.pdf)
+
+---
+
+
 # Fault-Tolerant RISC-V Core: Radiation Hardening By Design (RHBD)
 
 ## Abstract
@@ -89,8 +94,9 @@ This core was developed and verified using a CLI-first open-source toolchain on 
 **To reproduce the top-level simulation:**
 ```bash
 # Clone the repository
-git clone [https://github.com/FC-Pascal/riscv-tmr-fault-tolerance.git](https://github.com/FC-Pascal/riscv-tmr-fault-tolerance.git)
-cd riscv-tmr-fault-tolerance
+git clone https://github.com/FC-Pascal/riscv-tmr-fault-tolerance-.git
+cd riscv-tmr-fault-tolerance-
+
 
 # Compile the top-level datapath
 iverilog -o tb_cpu_core.vvp src/core/decoder.v src/tmr/tmr_voter.v src/tmr/tmr_register_file.v src/core/alu.v src/core/cpu_core.v tb/tb_cpu_core.v
