@@ -23,7 +23,7 @@ The datapath is structured around a single-cycle microarchitecture utilizing sta
 ## Repository Structure
 
 ```text
-riscv-tmr-fault-tolerance/
+riscv-tmr-fault-tolerance-/
 ├── docs/                   # Waveform screenshots and architecture diagrams
 ├── src/                    # Synthesizable Verilog RTL
 │   ├── core/               # Standard RISC-V execution modules (alu.v, decoder.v, cpu_core.v)
